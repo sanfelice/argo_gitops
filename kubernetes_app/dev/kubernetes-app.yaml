@@ -13,7 +13,7 @@ spec:
   source:
     kustomize:
       version: v4.2.0
-    repoURL: https://githuhttps://github.com/sanfelice/kubernetes_projects
+    repoURL: https://github.com/sanfelice/kubernetes_projects
     targetRevision: dev
     path: kubernetes_app/dev
   destination:
