@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubernetes-app-dev
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  #The project the application belongs to
+  project: kubernetes-app
+
+  #Source of the application manifests
+  source:
+    kustomize:
+      version: v4.2.0
+    repoURL: aa
+    targetRevision: dev
+    path: a
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
