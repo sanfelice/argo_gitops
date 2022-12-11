@@ -11,9 +11,7 @@ spec:
 
   #Source of the application manifests
   source:
-    kustomize:
-      version: v4.2.0
-    repoURL: aa
+    repoURL: https://github.com/sanfelice/kubernetes_projects
     targetRevision: dev
     path: kubernetes_app/qa
   destination:

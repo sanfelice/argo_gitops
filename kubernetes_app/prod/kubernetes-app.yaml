@@ -11,7 +11,7 @@ spec:
 
   #Source of the application manifests
   source:
-    repoURL: aa
+    repoURL: https://github.com/sanfelice/kubernetes_projects
     targetRevision: master
     path: kubernetes_app/prod
   destination:
