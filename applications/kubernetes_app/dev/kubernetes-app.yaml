@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/sanfelice/kubernetes_projects
     targetRevision: dev
-    path: kubernetes_app/dev
+    path: applications/kubernetes_app/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
