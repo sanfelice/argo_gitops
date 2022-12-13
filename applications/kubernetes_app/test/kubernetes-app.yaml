@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubernetes-app-test
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  #The project the application belongs to
+  project: kubernetes-app
+
+  #Source of the application manifests
+  source:
+    repoURL: https://github.com/sanfelice/kubernetes_projects
+    targetRevision: dev
+    path: applications/kubernetes_app/test
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: test
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
